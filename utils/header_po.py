@@ -21,7 +21,6 @@ class Header:
         current_url = self.driver.current_url
         print("Current Title is:", title)
         print("Current URL is:", current_url)
-
         time.sleep(5)
         return self
 
