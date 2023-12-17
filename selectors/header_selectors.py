@@ -17,3 +17,4 @@ class HeaderLocators:
     overview = '// *[ @ id = ":R3kcmH1:"] / button[1] / a'
     our_ingredients = '// *[ @ id = ":R3kcmH1:"] / button[2] / a'
     contact_us = '// *[ @ id = ":R3kcmH1:"] / button[3] / a'
+    where_to_buy = '//*[@id="__next"]/header/nav/div/div/ul/li[2]/a'

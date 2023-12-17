@@ -34,6 +34,10 @@ class TestHeader(unittest.TestCase):
         self.header.load()
         self.header.about_lubriderm()
 
+    def test_where_to_buy(self):
+        self.header.load()
+        self.header.where_to_buy()
+
 
 if __name__ == "__main__":
     unittest.main()
