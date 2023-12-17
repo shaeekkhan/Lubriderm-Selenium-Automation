@@ -9,18 +9,30 @@ class TestHeader(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-        self.home_page = Header(self.driver)
+        self.header = Header(self.driver)
 
     def tearDown(self):
         self.driver.quit()
 
+    def test_email_sign_up(self):
+        self.header.load()
+        self.header.email_sign_up()
+
     def test_click_logo(self):
-        self.home_page.load()
-        self.home_page.click_logo()
+        self.header.load()
+        self.header.click_logo()
 
     def test_products_nav(self):
-        self.home_page.load()
-        self.home_page.products_nav()
+        self.header.load()
+        self.header.products_nav()
+
+    def test_skin_concerns_nav(self):
+        self.header.load()
+        self.header.skin_concerns_nav()
+
+    def test_about_lubriderm(self):
+        self.header.load()
+        self.header.about_lubriderm()
 
 
 if __name__ == "__main__":
