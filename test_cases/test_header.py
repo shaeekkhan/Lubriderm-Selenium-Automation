@@ -1,17 +1,16 @@
-import unittest
+import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from utils.header_po import Header
 
 
-class TestHeader(unittest.TestCase):
-
-    def setUp(self):
+class TestHeader:
+    @pytest.fixture(autouse=True)
+    def setup_and_teardown(self):
         self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         self.header = Header(self.driver)
-
-    def tearDown(self):
+        yield
         self.driver.quit()
 
     def test_email_sign_up(self):
@@ -37,7 +36,3 @@ class TestHeader(unittest.TestCase):
     def test_where_to_buy(self):
         self.header.load()
         self.header.where_to_buy()
-
-
-if __name__ == "__main__":
-    unittest.main()
