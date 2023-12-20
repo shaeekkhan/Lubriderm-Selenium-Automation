@@ -16,3 +16,11 @@ class TestFooter:
     def test_back_to_top(self):
         self.Footer.load()
         self.Footer.back_to_top()
+
+    def test_footer_form(self):
+        self.Footer.load()
+        self.Footer.footer_form()
+
+    def test_footer_product_menu(self):
+        self.Footer.load()
+        self.Footer.footer_product_menu()
