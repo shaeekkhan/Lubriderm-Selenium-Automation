@@ -24,3 +24,11 @@ class TestFooter:
     def test_footer_product_menu(self):
         self.Footer.load()
         self.Footer.footer_product_menu()
+
+    def test_footer_company_info_menu(self):
+        self.Footer.load()
+        self.Footer.footer_company_info_menu()
+
+    def test_footer_legal_menu(self):
+        self.Footer.load()
+        self.Footer.footer_legal_menu()
