@@ -16,3 +16,7 @@ class TestHomepage:
     def test_banner(self):
         self.Homepage.load()
         self.Homepage.banner()
+
+    def test_our_products_section(self):
+        self.Homepage.load()
+        self.Homepage.our_products_section()
