@@ -349,15 +349,12 @@ class Footer:
             time.sleep(1)
 
             click_on_customise_cookie = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, FooterLocators.footer_cookie_policy)))
+                EC.presence_of_element_located((By.XPATH, FooterLocators.footer_customize_cookie)))
             time.sleep(1)
             print("Footer Navigation Text:", click_on_customise_cookie.text)
             time.sleep(1)
             click_on_customise_cookie.click()
-            time.sleep(2)
-            print(self.driver.title)
-            print(self.driver.current_url)
-            time.sleep(3)
+            time.sleep(5)
 
             cookie_pop_up = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, FooterLocators.cookie_pop_up)))

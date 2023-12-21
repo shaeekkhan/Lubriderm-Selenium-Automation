@@ -24,6 +24,7 @@ class FooterLocators:
     footer_limit_the_use = '//*[@id="__next"]/footer/div/div/div[1]/div[1]/div/div[3]/div/ul/li[4]/a'
     footer_do_not_sell = '//*[@id="__next"]/footer/div/div/div[1]/div[1]/div/div[3]/div/ul/li[5]/a'
     footer_cookie_policy = '//*[@id="__next"]/footer/div/div/div[1]/div[1]/div/div[3]/div/ul/li[6]/a'
+    footer_customize_cookie = '//*[@id="__next"]/footer/div/div/div[1]/div[1]/div/div[3]/div/ul/li[7]/button'
     cookie_pop_up = '//*[@id="onetrust-pc-sdk"]/div'
     cookie_pop_up_close = '//*[@id="close-pc-btn-handler"]'
 
