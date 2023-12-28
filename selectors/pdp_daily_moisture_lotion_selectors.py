@@ -1,0 +1,13 @@
+class PDP1Locators:
+    close_bottom_pop_up = '//*[@id="onetrust-close-btn-container"]/button'
+    main_image = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[1]/div/div/img'
+    down_arrow = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[3]/div/button'
+    up_arrow = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[1]/div/button'
+    slide_dot2 = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[2]/div/button[2]'
+    slide_dot3 = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[2]/div/button[3]'
+    slide_dot4 = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[2]/div/button[4]'
+    slide_dot5 = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[2]/div/button[5]'
+    image2 = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[2]/div/div/img'
+    image3 = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[3]/div/div/img'
+    image4 = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[4]/div/div/img'
+    image5 = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[5]/div/div/img'
