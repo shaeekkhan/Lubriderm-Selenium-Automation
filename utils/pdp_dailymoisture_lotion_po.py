@@ -131,3 +131,51 @@ class PdpPage1:
             logging.info("PDP image_carousel element not found within the specified time. %s")
         time.sleep(2)
         return self
+
+    def products_description_section(self):
+        try:
+            eyebrow_tag = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.eyebrow)))
+            logging.info(eyebrow_tag.text)
+
+            bazarvoice_review = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.star_review)))
+            logging.info(bazarvoice_review.text)
+
+            product_description_header = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.h1_title)))
+            logging.info(product_description_header.text)
+
+            click_on_buy_now_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.buy_now_cta)))
+            time.sleep(1)
+            logging.info("CTA Text: %s", click_on_buy_now_cta.text)
+            time.sleep(1)
+            click_on_buy_now_cta.click()
+            time.sleep(5)
+
+            price_spider_pop_up = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, PDP1Locators.price_spider_pop_up)))
+            if price_spider_pop_up.is_displayed():
+                logging.info("Price spider Pop up displayed %s")
+            else:
+                logging.info("!!!!!!!!!! Price spider Pop up not displayed !!!!!!!!!! %s")
+
+            price_spider_pop_up_close = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, PDP1Locators.price_spider_pop_up_close)))
+            price_spider_pop_up_close.click()
+
+            if price_spider_pop_up_close.is_enabled():
+                logging.info("Price spider Pop up closed %s")
+            else:
+                logging.info("!!!!!!!!!! Price spider Pop up not closed !!!!!!!!!! %s")
+            time.sleep(2)
+
+            product_description_details = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.product_details)))
+            logging.info(product_description_details.text)
+
+        except TimeoutException:
+            logging.info("product_description_header element not found within the specified time. %s")
+        time.sleep(2)
+        return self

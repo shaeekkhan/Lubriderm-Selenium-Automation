@@ -18,3 +18,8 @@ class TestPDP:
         self.Pdp.close_pop_up()
         self.Pdp.product_image()
         self.Pdp.image_carousel()
+
+    def test_products_description_section(self):
+        self.Pdp.load()
+        self.Pdp.close_pop_up()
+        self.Pdp.products_description_section()

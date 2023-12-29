@@ -11,3 +11,10 @@ class PDP1Locators:
     image3 = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[3]/div/div/img'
     image4 = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[4]/div/div/img'
     image5 = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[5]/div/div/img'
+    h1_title = '//*[@id="product-overview"]/div[2]/h1'
+    eyebrow = '//*[@id="product-overview"]/div[2]/p'
+    star_review = '//*[@id="product-overview"]/div[2]/div[1]'
+    buy_now_cta = '//*[@id="product-overview"]/div[2]/div[2]/div/div'
+    price_spider_pop_up = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
+    price_spider_pop_up_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
+    product_details = '//*[@id="product-overview"]/div[2]/div[3]'
