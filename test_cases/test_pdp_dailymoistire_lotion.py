@@ -28,3 +28,13 @@ class TestPDP:
         self.Pdp.load()
         self.Pdp.close_pop_up()
         self.Pdp.jump_to_link_menu()
+
+    def test_ingredients_section(self):
+        self.Pdp.load()
+        self.Pdp.close_pop_up()
+        self.Pdp.ingredients_section()
+
+    def test_you_may_also_like(self):
+        self.Pdp.load()
+        self.Pdp.close_pop_up()
+        self.Pdp.you_may_also_like()
