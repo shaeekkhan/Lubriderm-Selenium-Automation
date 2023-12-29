@@ -1,5 +1,6 @@
 class PDP1Locators:
     close_bottom_pop_up = '//*[@id="onetrust-close-btn-container"]/button'
+    product_over_view_div = '//*[@id="product-overview"]'
     main_image = '//*[@id="product-overview"]/div[1]/div/div/div[3]/div/div/div[1]/div/div/img'
     down_arrow = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[3]/div/button'
     up_arrow = '//*[@id="product-overview"]/div[1]/div/div/div[1]/div/div[1]/div/button'
@@ -18,3 +19,12 @@ class PDP1Locators:
     price_spider_pop_up = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
     price_spider_pop_up_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
     product_details = '//*[@id="product-overview"]/div[2]/div[3]'
+    jump_to_links = '//*[@id="__next"]/main/section/div[2]/div/div/div'
+    jum_to_links_lists = '//*[@id="__next"]/main/section/div[2]/div/div/div/ul'
+    product_over_view = '//*[@id="__next"]/main/section/div[2]/div/div/div/ul/li[2]'
+    ingredients = '//*[@id="__next"]/main/section/div[2]/div/div/div/ul/li[3]'
+    you_may_also_like = '//*[@id="__next"]/main/section/div[2]/div/div/div/ul/li[4]'
+    reviews = '//*[@id="__next"]/main/section/div[2]/div/div/div/ul/li[5]'
+    ingredients_section = '//*[@id="ingredients"]'
+    you_may_also_like_section = '//*[@id="in-this-collection"]'
+    review_section = '//*[@id="reviews"]'

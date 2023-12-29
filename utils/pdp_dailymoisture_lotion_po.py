@@ -179,3 +179,89 @@ class PdpPage1:
             logging.info("product_description_header element not found within the specified time. %s")
         time.sleep(2)
         return self
+
+    def jump_to_link_menu(self):
+        try:
+            product_over_view_div = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.jump_to_links)))
+
+            ingredients_div = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.ingredients_section)))
+
+            you_may_also_div = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.you_may_also_like_section)))
+
+            reviews_div = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.review_section)))
+
+            scroll_to_jump_to_links = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.jump_to_links)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_jump_to_links)
+            time.sleep(1)
+
+            jump_to_link_menu_lists = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.jum_to_links_lists)))
+            logging.info(jump_to_link_menu_lists.text)
+
+            click_on_product_over_view = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.product_over_view)))
+            time.sleep(1)
+            logging.info("CTA Text: %s", click_on_product_over_view.text)
+            time.sleep(1)
+            click_on_product_over_view.click()
+            time.sleep(2)
+
+            if product_over_view_div.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            scroll_to_jump_to_links = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.jump_to_links)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_jump_to_links)
+            time.sleep(1)
+
+            click_on_ingredients_links = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.ingredients)))
+            time.sleep(1)
+            logging.info("CTA Text: %s", click_on_ingredients_links.text)
+            time.sleep(1)
+            click_on_ingredients_links.click()
+            time.sleep(5)
+
+            if ingredients_div.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            click_on_you_may_also_link = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.you_may_also_like)))
+            time.sleep(1)
+            logging.info("CTA Text: %s", click_on_you_may_also_link.text)
+            time.sleep(1)
+            click_on_you_may_also_link.click()
+            time.sleep(5)
+
+            if you_may_also_div.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            click_on_reviews = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.reviews)))
+            time.sleep(1)
+            logging.info("CTA Text: %s", click_on_reviews.text)
+            time.sleep(1)
+            click_on_reviews.click()
+            time.sleep(5)
+
+            if reviews_div.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+        except TimeoutException:
+            logging.info("jump_to_link_menu element not found within the specified time. %s")
+        time.sleep(2)
+        return self
+

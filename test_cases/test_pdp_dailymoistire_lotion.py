@@ -23,3 +23,8 @@ class TestPDP:
         self.Pdp.load()
         self.Pdp.close_pop_up()
         self.Pdp.products_description_section()
+
+    def test_jump_to_link_menu(self):
+        self.Pdp.load()
+        self.Pdp.close_pop_up()
+        self.Pdp.jump_to_link_menu()
