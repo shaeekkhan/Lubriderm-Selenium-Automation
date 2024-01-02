@@ -28,3 +28,13 @@ class TestHeader:
         self.Plp.close_pop_up()
         self.Plp.product_2()
 
+    def test_product_3(self):
+        self.Plp.load()
+        self.Plp.close_pop_up()
+        self.Plp.product_3()
+
+    def test_product_4(self):
+        self.Plp.load()
+        self.Plp.close_pop_up()
+        self.Plp.product_4()
+

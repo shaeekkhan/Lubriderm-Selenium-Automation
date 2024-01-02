@@ -16,3 +16,16 @@ class PlpAllProducts:
     product2_buy_now_cta = '//*[@id="__next"]/main/div[3]/div[1]/div[2]/div[3]/div[2]/div'
     price_spider_pop_up2 = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
     price_spider_pop_up2_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
+    product3_image = '//*[@id="__next"]/main/div[3]/div[1]/div[3]/div[1]/a'
+    third_eye_brow_tag = '//*[@id="__next"]/main/div[3]/div[1]/div[3]/div[2]/p'
+    product3_name = '//*[@id="__next"]/main/div[3]/div[1]/div[3]/div[2]/a'
+    product3_buy_now_cta = '//*[@id="__next"]/main/div[3]/div[1]/div[3]/div[3]/div[2]/div'
+    price_spider_pop_up3 = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
+    price_spider_pop_up3_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
+    products_card_second_row = '//*[@id="__next"]/main/div[3]/div[1]/div[4]'
+    product4_image = '//*[@id="__next"]/main/div[3]/div[1]/div[4]/div[1]/a'
+    fourth_eye_brow_tag = '//*[@id="__next"]/main/div[3]/div[1]/div[4]/div[2]/p'
+    product4_name = '//*[@id="__next"]/main/div[3]/div[1]/div[4]/div[2]/a'
+    product4_buy_now_cta = '//*[@id="__next"]/main/div[3]/div[1]/div[4]/div[3]/div[2]/div'
+    price_spider_pop_up4 = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
+    price_spider_pop_up4_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
