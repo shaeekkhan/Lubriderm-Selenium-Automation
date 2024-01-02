@@ -308,7 +308,10 @@ class PdpPage1:
                 EC.presence_of_element_located((By.XPATH, PDP1Locators.you_may_also_like_section)))
             self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_you_may_also_like)
             time.sleep(1)
-            logging.info("Section title is: %s", scroll_to_you_may_also_like.text)
+
+            you_may_also_like_h3_header = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.you_may_also_like_header)))
+            logging.info("Section title is: %s", you_may_also_like_h3_header.text)
 
             product_card1 = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, PDP1Locators.product1_card_image)))
@@ -321,8 +324,6 @@ class PdpPage1:
 
             click_on_product_card1_image = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, PDP1Locators.product1_card_image)))
-            time.sleep(1)
-            logging.info("Product name Text: %s", click_on_product_card1_image.text)
             time.sleep(1)
             click_on_product_card1_image.click()
             time.sleep(2)
@@ -358,12 +359,12 @@ class PdpPage1:
             time.sleep(1)
 
             click_on_buy_now_cta1 = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, PDP1Locators.buy_now1)))
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.buy_now_cta1)))
             time.sleep(1)
             logging.info("CTA Text: %s", click_on_buy_now_cta1.text)
             time.sleep(1)
             click_on_buy_now_cta1.click()
-            time.sleep(5)
+            time.sleep(10)
 
             price_spider_pop_up1 = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, PDP1Locators.price_spider_pop_up1)))
@@ -435,12 +436,12 @@ class PdpPage1:
             time.sleep(1)
 
             click_on_buy_now_cta2 = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, PDP1Locators.buy_now2)))
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.buy_now_cta2)))
             time.sleep(1)
             logging.info("CTA Text: %s", click_on_buy_now_cta2.text)
             time.sleep(1)
             click_on_buy_now_cta2.click()
-            time.sleep(5)
+            time.sleep(10)
 
             price_spider_pop_up2 = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, PDP1Locators.price_spider_pop_up2)))
@@ -512,12 +513,12 @@ class PdpPage1:
             time.sleep(1)
 
             click_on_buy_now_cta3 = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, PDP1Locators.buy_now3)))
+                EC.presence_of_element_located((By.XPATH, PDP1Locators.buy_now_cta3)))
             time.sleep(1)
             logging.info("CTA Text: %s", click_on_buy_now_cta3.text)
             time.sleep(1)
             click_on_buy_now_cta3.click()
-            time.sleep(5)
+            time.sleep(10)
 
             price_spider_pop_up3 = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, PDP1Locators.price_spider_pop_up3)))
@@ -540,4 +541,3 @@ class PdpPage1:
             logging.info("you_may_also_like element not found within the specified time. %s")
         time.sleep(2)
         return self
-
