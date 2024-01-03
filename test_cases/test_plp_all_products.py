@@ -38,3 +38,17 @@ class TestHeader:
         self.Plp.close_pop_up()
         self.Plp.product_4()
 
+    def test_product_5(self):
+        self.Plp.load()
+        self.Plp.close_pop_up()
+        self.Plp.product_5()
+
+    def test_product_6(self):
+        self.Plp.load()
+        self.Plp.close_pop_up()
+        self.Plp.product_6()
+
+    def test_product_7(self):
+        self.Plp.load()
+        self.Plp.close_pop_up()
+        self.Plp.product_7()
