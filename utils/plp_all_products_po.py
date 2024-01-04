@@ -647,3 +647,103 @@ class Plp:
             logging.info("product_6 element not found within the specified time. %s")
         time.sleep(2)
         return self
+
+    def learn_more_about(self):
+        try:
+            scroll_to_learn_more_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_learn_more_section)
+            time.sleep(2)
+            logging.info(scroll_to_learn_more_section.text)
+
+            click_on_learn_more_about1_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_image1)))
+
+            if click_on_learn_more_about1_image.is_displayed():
+                logging.info("Product image is present %s")
+            else:
+                logging.info("!!!!!!!!!! Product image not present !!!!!!!!!! %s")
+            time.sleep(1)
+
+            click_on_learn_more_about1_image.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_learn_more_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_learn_more_section)
+            time.sleep(2)
+
+            grab_learn_more_about1_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_header1_text)))
+            logging.info("Sub copy Text: %s", grab_learn_more_about1_text.text)
+
+            click_on_rlearn_more_about1_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about1_cta)))
+            time.sleep(1)
+            logging.info("CTA Text: %s", click_on_rlearn_more_about1_cta.text)
+            time.sleep(1)
+            click_on_rlearn_more_about1_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_learn_more_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_learn_more_section)
+            time.sleep(2)
+
+            click_on_learn_more_about2_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_image2)))
+
+            if click_on_learn_more_about2_image.is_displayed():
+                logging.info("Product image is present %s")
+            else:
+                logging.info("!!!!!!!!!! Product image not present !!!!!!!!!! %s")
+            time.sleep(1)
+
+            click_on_learn_more_about2_image.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_learn_more_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_learn_more_section)
+            time.sleep(2)
+
+            grab_learn_more_about2_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about_header2_text)))
+            logging.info("Sub copy Text: %s", grab_learn_more_about2_text.text)
+
+            click_on_rlearn_more_about2_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, PlpAllProducts.learn_more_about2_cta)))
+            time.sleep(1)
+            logging.info("CTA Text: %s", click_on_rlearn_more_about2_cta.text)
+            time.sleep(1)
+            click_on_rlearn_more_about2_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+        except TimeoutException:
+            logging.info("learn_more_about element not found within the specified time. %s")
+        time.sleep(2)
+        return self

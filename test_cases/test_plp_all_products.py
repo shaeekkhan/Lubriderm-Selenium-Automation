@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from utils.plp_all_products_po import Plp
 
 
-class TestHeader:
+class TestPlp:
     @pytest.fixture(autouse=True)
     def setup_and_teardown(self):
         self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
@@ -52,3 +52,8 @@ class TestHeader:
         self.Plp.load()
         self.Plp.close_pop_up()
         self.Plp.product_7()
+
+    def test_learn_more_about(self):
+        self.Plp.load()
+        self.Plp.close_pop_up()
+        self.Plp.learn_more_about()
