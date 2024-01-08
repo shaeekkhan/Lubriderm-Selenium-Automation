@@ -151,3 +151,192 @@ class Faq:
         time.sleep(2)
         return self
 
+    def products_section(self):
+        try:
+            scroll_to_product_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.section_title2)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_product_section)
+
+            grab_section_title = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.section_title2)))
+            logging.info("Header Text: %s", grab_section_title.text)
+
+            accordion4_scenarios = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion4)))
+
+            grab_accordion4_title = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion4_title)))
+            logging.info("Header Text: %s", grab_accordion4_title.text)
+
+            accordion4_plus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion4_plus_icon)))
+
+            accordion4_minus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion4_minus_icon)))
+
+            accordion4_scenarios.click()
+            time.sleep(2)
+            if accordion4_minus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            grab_accordion4_paragraph = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion4_paragraph)))
+            logging.info("Header Text: %s", grab_accordion4_paragraph.text)
+
+            accordion4_scenarios.click()
+            time.sleep(2)
+            if accordion4_plus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            accordion5_scenarios = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion5)))
+
+            grab_accordion5_title = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion5_title)))
+            logging.info("Header Text: %s", grab_accordion5_title.text)
+
+            accordion5_plus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion5_plus_icon)))
+
+            accordion5_minus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion5_minus_icon)))
+
+            accordion5_scenarios.click()
+            time.sleep(2)
+            if accordion5_minus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            grab_accordion5_paragraph = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion5_paragraph)))
+            logging.info("Header Text: %s", grab_accordion5_paragraph.text)
+
+            accordion5_scenarios.click()
+            time.sleep(2)
+            if accordion5_plus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            accordion6_scenarios = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion6)))
+
+            grab_accordion6_title = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion6_title)))
+            logging.info("Header Text: %s", grab_accordion6_title.text)
+
+            accordion6_plus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion6_plus_icon)))
+
+            accordion6_minus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion6_minus_icon)))
+
+            accordion6_scenarios.click()
+            time.sleep(2)
+            if accordion6_minus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            grab_accordion6_paragraph = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion6_paragraph)))
+            logging.info("Header Text: %s", grab_accordion6_paragraph.text)
+
+            accordion6_scenarios.click()
+            time.sleep(2)
+            if accordion6_plus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            accordion7_scenarios = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion7)))
+
+            grab_accordion7_title = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion7_title)))
+            logging.info("Header Text: %s", grab_accordion7_title.text)
+
+            accordion7_plus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion7_plus_icon)))
+
+            accordion7_minus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion7_minus_icon)))
+
+            accordion7_scenarios.click()
+            time.sleep(2)
+            if accordion7_minus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            grab_accordion7_paragraph = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion7_paragraph)))
+            logging.info("Header Text: %s", grab_accordion7_paragraph.text)
+
+            accordion7_scenarios.click()
+            time.sleep(2)
+            if accordion7_plus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            accordion8_scenarios = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion8)))
+
+            grab_accordion8_title = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion8_title)))
+            logging.info("Header Text: %s", grab_accordion8_title.text)
+
+            accordion8_plus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion8_plus_icon)))
+
+            accordion8_minus_icon = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion8_minus_icon)))
+
+            accordion8_scenarios.click()
+            time.sleep(2)
+            if accordion8_minus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            grab_accordion8_paragraph = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion8_paragraph)))
+            logging.info("Header Text: %s", grab_accordion8_paragraph.text)
+
+            accordion8_scenarios.click()
+            time.sleep(2)
+            if accordion8_plus_icon.is_displayed():
+                logging.info("Scenario Passed")
+            else:
+                logging.info("!!!!! Scenario failed !!!!!")
+
+            contact_us_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.accordion8_paragraph)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", contact_us_cta)
+
+            grab_contact_us_section_title = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.contact_us_title)))
+            logging.info("Header Text: %s", grab_contact_us_section_title.text)
+
+            click_on_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, FaqLocators.contact_us_cta)))
+            logging.info("CTA Text: %s", click_on_cta.text)
+            click_on_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+        except TimeoutException:
+            logging.info("products element not found within the specified time. %s")
+        time.sleep(2)
+        return self

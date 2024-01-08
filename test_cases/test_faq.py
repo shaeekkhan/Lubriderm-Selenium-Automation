@@ -22,3 +22,8 @@ class TestFaq:
         self.Faq.load()
         self.Faq.close_pop_up()
         self.Faq.product_recommendation()
+
+    def test_products_section(self):
+        self.Faq.load()
+        self.Faq.close_pop_up()
+        self.Faq.products_section()
