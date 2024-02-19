@@ -11,6 +11,12 @@ from config import Config
 from selectors.header_selectors import HeaderLocators
 
 
+def handle_exception(driver: object, error_message: object) -> object:
+    logging.error(error_message)
+    driver.close()
+    assert False, error_message
+
+
 class Header:
     def __init__(self, driver):
         self.driver = driver
@@ -38,7 +44,7 @@ class Header:
             self.driver.back()
 
         except TimeoutException:
-            logging.info("Email sign up element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time.")
         time.sleep(2)
         return self
 
