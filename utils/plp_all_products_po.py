@@ -10,6 +10,12 @@ from config import Config
 from selectors.plp_all_products_selectors import PlpAllProducts
 
 
+def handle_exception(driver: object, error_message: object) -> object:
+    logging.error(error_message)
+    driver.close()
+    assert False, error_message
+
+
 class Plp:
     def __init__(self, driver):
         self.driver = driver
@@ -32,7 +38,7 @@ class Plp:
             close_pop_up.click()
 
         except TimeoutException:
-            logging.info("close_pop_up element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -56,7 +62,7 @@ class Plp:
                 logging.info("!!!!!!!!!! Main image is not present !!!!!!!!!!")
 
         except TimeoutException:
-            logging.info("banner element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -140,7 +146,7 @@ class Plp:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("product_1 element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -224,7 +230,7 @@ class Plp:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("product_2 element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -308,7 +314,7 @@ class Plp:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("product_3 element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -392,7 +398,7 @@ class Plp:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("product_4 element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -476,7 +482,7 @@ class Plp:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("product_5 element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -560,7 +566,7 @@ class Plp:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("product_6 element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -644,7 +650,7 @@ class Plp:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("product_6 element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -744,6 +750,6 @@ class Plp:
             time.sleep(1)
 
         except TimeoutException:
-            logging.info("learn_more_about element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self

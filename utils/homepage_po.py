@@ -10,6 +10,12 @@ from config import Config
 from selectors.homepage_selectors import HomepageLocators
 
 
+def handle_exception(driver: object, error_message: object) -> object:
+    logging.error(error_message)
+    driver.close()
+    assert False, error_message
+
+
 class Homepage:
     def __init__(self, driver):
         self.driver = driver
@@ -57,7 +63,7 @@ class Homepage:
             time.sleep(1)
 
         except TimeoutException:
-            logging.info("banner element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -210,7 +216,7 @@ class Homepage:
             time.sleep(1)
 
         except TimeoutException:
-            logging.info("our_products_section element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -451,7 +457,7 @@ class Homepage:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("our_bestsellers_section element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -654,7 +660,7 @@ class Homepage:
             time.sleep(1)
 
         except TimeoutException:
-            logging.info("skin_concerns_section element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -754,6 +760,6 @@ class Homepage:
             time.sleep(1)
 
         except TimeoutException:
-            logging.info("related_content_section element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self

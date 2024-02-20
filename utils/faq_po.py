@@ -10,6 +10,12 @@ from config import Config
 from selectors.faq_selectors import FaqLocators
 
 
+def handle_exception(driver: object, error_message: object) -> object:
+    logging.error(error_message)
+    driver.close()
+    assert False, error_message
+
+
 class Faq:
     def __init__(self, driver):
         self.driver = driver
@@ -32,7 +38,7 @@ class Faq:
             close_pop_up.click()
 
         except TimeoutException:
-            logging.info("close_pop_up element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -43,7 +49,7 @@ class Faq:
             logging.info("Header Text: %s", grab_banner_header_text.text)
 
         except TimeoutException:
-            logging.info("banner element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -147,7 +153,7 @@ class Faq:
                 logging.info("!!!!! Scenario failed !!!!!")
 
         except TimeoutException:
-            logging.info("product_recommendation element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -337,6 +343,6 @@ class Faq:
             time.sleep(1)
 
         except TimeoutException:
-            logging.info("products element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self

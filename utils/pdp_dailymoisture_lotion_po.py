@@ -10,6 +10,12 @@ from config import Config
 from selectors.pdp_daily_moisture_lotion_selectors import PDP1Locators
 
 
+def handle_exception(driver: object, error_message: object) -> object:
+    logging.error(error_message)
+    driver.close()
+    assert False, error_message
+
+
 class PdpPage1:
     def __init__(self, driver):
         self.driver = driver
@@ -32,7 +38,7 @@ class PdpPage1:
             close_pop_up.click()
 
         except TimeoutException:
-            logging.info("close_pop_up element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -48,7 +54,7 @@ class PdpPage1:
                 logging.info("!!!!!!!!!! Main image is not present !!!!!!!!!!")
 
         except TimeoutException:
-            logging.info("product_image element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
             time.sleep(2)
             return self
 
@@ -128,7 +134,7 @@ class PdpPage1:
                 logging.info("!!!!!!!!!! No image displayed !!!!!!!!!!")
 
         except TimeoutException:
-            logging.info("PDP image_carousel element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -176,7 +182,7 @@ class PdpPage1:
             logging.info(product_description_details.text)
 
         except TimeoutException:
-            logging.info("product_description_header element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -261,7 +267,7 @@ class PdpPage1:
                 logging.info("!!!!! Scenario failed !!!!!")
 
         except TimeoutException:
-            logging.info("jump_to_link_menu element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -298,7 +304,7 @@ class PdpPage1:
             self.driver.back()
 
         except TimeoutException:
-            logging.info("ingredients_section element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -538,6 +544,6 @@ class PdpPage1:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("you_may_also_like element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self

@@ -10,6 +10,12 @@ from config import Config
 from selectors.contact_us_selectors import ContactusLocators
 
 
+def handle_exception(driver: object, error_message: object) -> object:
+    logging.error(error_message)
+    driver.close()
+    assert False, error_message
+
+
 class ContactUs:
     def __init__(self, driver):
         self.driver = driver
@@ -32,7 +38,7 @@ class ContactUs:
             close_pop_up.click()
 
         except TimeoutException:
-            logging.info("close_pop_up element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -43,7 +49,7 @@ class ContactUs:
             logging.info("Header Text: %s", grab_banner_header_text.text)
 
         except TimeoutException:
-            logging.info("banner element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -199,6 +205,6 @@ class ContactUs:
             time.sleep(1)
 
         except TimeoutException:
-            logging.info("faq_section element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self

@@ -10,6 +10,12 @@ from config import Config
 from selectors.footer_selectors import FooterLocators
 
 
+def handle_exception(driver: object, error_message: object) -> object:
+    logging.error(error_message)
+    driver.close()
+    assert False, error_message
+
+
 class Footer:
     def __init__(self, driver):
         self.driver = driver
@@ -36,7 +42,7 @@ class Footer:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("Footer back_to_top element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -106,7 +112,7 @@ class Footer:
             #     logging.info("!!!!!!!!!! Submission failed !!!!!!!!!!")
 
         except TimeoutException:
-            logging.info("footer_form element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -178,7 +184,7 @@ class Footer:
             self.driver.back()
 
         except TimeoutException:
-            logging.info("footer_product_menu element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -236,7 +242,7 @@ class Footer:
             self.driver.back()
 
         except TimeoutException:
-            logging.info("footer_company_info_menu element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -370,6 +376,6 @@ class Footer:
             time.sleep(2)
 
         except TimeoutException:
-            logging.info("footer_legal_menu element not found within the specified time. %s")
+            handle_exception(self.driver, "Products element not found within the specified time. %s")
         time.sleep(2)
         return self
