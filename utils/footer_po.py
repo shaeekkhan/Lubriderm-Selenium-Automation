@@ -61,9 +61,9 @@ class Footer:
                 EC.presence_of_element_located((By.XPATH, FooterLocators.footer_form_sub_copy_1)))
             logging.info("Sub copy 1 Text: %s", grab_footer_form_sub_copy_1.text)
 
-            grab_footer_form_sub_copy_2 = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, FooterLocators.footer_form_sub_copy_2)))
-            logging.info("Sub copy 2 Text: %s", grab_footer_form_sub_copy_2.text)
+            # grab_footer_form_sub_copy_2 = WebDriverWait(self.driver, 10).until(
+            #     EC.presence_of_element_located((By.XPATH, FooterLocators.footer_form_sub_copy_2)))
+            # logging.info("Sub copy 2 Text: %s", grab_footer_form_sub_copy_2.text)
 
             input_first_name = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, FooterLocators.input_name)))

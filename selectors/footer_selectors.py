@@ -5,7 +5,7 @@ class FooterLocators:
     input_email = '//*[@id="sfmc_careclub_form_footer"]/div[1]/div[2]/div/input'
     footer_form_header = '//*[@id="sfmc_careclub_form_footer"]/h2'
     footer_form_sub_copy_1 = '//*[@id="sfmc_careclub_form_footer"]/p[1]'
-    footer_form_sub_copy_2 = '//*[@id="sfmc_careclub_form_footer"]/p[2]'
+    # footer_form_sub_copy_2 = '//*[@id="sfmc_careclub_form_footer"]/p[2]'
     disclaimer_copy = '//*[@id="sfmc_careclub_form_footer"]/div[2]/p'
     privacy_policy_link_text = '//*[@id="sfmc_careclub_form_footer"]/div[2]/p/a[1]'
     financial_incentive = '//*[@id="sfmc_careclub_form_footer"]/div[2]/p/a[2]'
