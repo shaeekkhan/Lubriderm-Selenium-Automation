@@ -28,10 +28,10 @@ class TestHomepage:
         self.Homepage.close_pop_up()
         self.Homepage.about_lubriderm()
 
-    def test_skin_concerns_section(self):
+    def test_our_best_seller(self):
         self.Homepage.load()
         self.Homepage.close_pop_up()
-        self.Homepage.skin_concerns_section()
+        self.Homepage.our_best_seller()
 
     def test_related_content_section(self):
         self.Homepage.load()

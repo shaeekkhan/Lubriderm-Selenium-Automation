@@ -24,3 +24,20 @@ class HomepageLocators:
     about_lubriderm_header_text = '//*[@id="__next"]/main/div[4]/div/h2'
     about_lubriderm_sub_text = '//*[@id="__next"]/main/div[4]/div/p'
     about_us_cta = '//*[@id="__next"]/main/div[4]/div/a'
+    our_best_seller = '//*[@id="__next"]/main/div[5]/h2'
+    our_best_seller_header_text = '//*[@id="__next"]/main/div[5]/h2/span'
+    product1_card_image = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[1]/div/div/div[1]/a/img'
+    product1_card_name = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[1]/div/div/div[2]/a/span'
+    buy_now_cta1 = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[1]/div/div/div[3]/div[2]/div'
+    price_spider_pop_up1 = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
+    price_spider_pop_up1_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
+    product2_card_image = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[2]/div/div/div[1]/a/img'
+    product2_card_name = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[2]/div/div/div[2]/a/span'
+    buy_now_cta2 = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div'
+    price_spider_pop_up2 = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
+    price_spider_pop_up2_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
+    product3_card_image = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[3]/div/div/div[1]/a/img'
+    product3_card_name = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[3]/div/div/div[2]/a/span'
+    buy_now_cta3 = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[3]/div/div/div[3]/div[2]/div'
+    price_spider_pop_up3 = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
+    price_spider_pop_up3_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
