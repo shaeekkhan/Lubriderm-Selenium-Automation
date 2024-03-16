@@ -38,7 +38,7 @@ class Homepage:
             close_pop_up.click()
 
         except TimeoutException:
-            handle_exception(self.driver, "Products element not found within the specified time. %s")
+            handle_exception(self.driver, "Pop-Up element not found within the specified time. %s")
         time.sleep(2)
         return self
 
@@ -76,6 +76,105 @@ class Homepage:
                 logging.info("Main image is present and the Alt text is: %s", alt_text)
             else:
                 logging.info("!!!!!!!!!! Main image is not present !!!!!!!!!!")
+
+        except TimeoutException:
+            handle_exception(self.driver, "Banner element not found within the specified time. %s")
+        time.sleep(2)
+        return self
+
+    def shop_by_collection(self):
+        try:
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            grab_section_header_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.section_header_text)))
+            logging.info(grab_section_header_text.text)
+            time.sleep(1)
+
+            click_on_see_all_product_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.see_all_product_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_see_all_product_cta.text)
+            time.sleep(1)
+            click_on_see_all_product_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            daily_moisture_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.collection_image1)))
+
+            if daily_moisture_image.is_displayed():
+                alt_text = daily_moisture_image.get_attribute('alt')
+                logging.info("Main image is present and the Alt text is: %s", alt_text)
+            else:
+                logging.info("!!!!!!!!!! Main image is not present !!!!!!!!!!")
+
+            click_on_daily_moisture_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.collection_image1)))
+            time.sleep(1)
+            click_on_daily_moisture_image.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            daily_moisture_details_header = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.daily_moisture_details_header_text)))
+            logging.info(daily_moisture_details_header.text)
+            time.sleep(1)
+            daily_moisture_details_header.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            grab_daily_moisture_details_sub_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.daily_moisture_details_sub_text)))
+            logging.info(grab_daily_moisture_details_sub_text.text)
+            time.sleep(1)
+
+            click_on_daily_moisture_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.daily_moisture_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_daily_moisture_cta.text)
+            time.sleep(1)
+            click_on_daily_moisture_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
 
         except TimeoutException:
             handle_exception(self.driver, "Banner element not found within the specified time. %s")
