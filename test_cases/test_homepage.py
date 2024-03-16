@@ -23,10 +23,10 @@ class TestHomepage:
         self.Homepage.close_pop_up()
         self.Homepage.shop_by_collection()
 
-    def test_our_bestsellers_section(self):
+    def test_about_lubriderm(self):
         self.Homepage.load()
         self.Homepage.close_pop_up()
-        self.Homepage.our_bestsellers_section()
+        self.Homepage.about_lubriderm()
 
     def test_skin_concerns_section(self):
         self.Homepage.load()

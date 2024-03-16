@@ -19,3 +19,8 @@ class HomepageLocators:
     intense_skin_repair_header_text = '//*[@id="__next"]/main/div[2]/div[2]/div[3]/div[2]/a'
     intense_skin_repair_sub_text = '//*[@id="__next"]/main/div[2]/div[2]/div[3]/div[3]'
     intense_skin_repair_cta = '//*[@id="__next"]/main/div[2]/div[2]/div[3]/a/button'
+    video_section = '//*[@id="__next"]/main/div[3]'
+    video = '//*[@id="__next"]/main/div[3]/div'
+    about_lubriderm_header_text = '//*[@id="__next"]/main/div[4]/div/h2'
+    about_lubriderm_sub_text = '//*[@id="__next"]/main/div[4]/div/p'
+    about_us_cta = '//*[@id="__next"]/main/div[4]/div/a'

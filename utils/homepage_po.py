@@ -316,3 +316,47 @@ class Homepage:
             handle_exception(self.driver, "Banner element not found within the specified time. %s")
         time.sleep(2)
         return self
+
+    def about_lubriderm(self):
+        try:
+            scroll_to_video_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.video_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_video_section)
+            time.sleep(3)
+
+            about_lubriderm_video = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.video)))
+
+            if about_lubriderm_video.is_displayed():
+                logging.info("Video is present")
+            else:
+                logging.info("!!!!!!!!!! Video is not present !!!!!!!!!!")
+
+            grab_about_lubriderm_header_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.about_lubriderm_header_text)))
+            logging.info(grab_about_lubriderm_header_text.text)
+            time.sleep(1)
+
+            grab_about_lubriderm_sub_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.about_lubriderm_sub_text)))
+            logging.info(grab_about_lubriderm_sub_text.text)
+            time.sleep(1)
+
+            click_on_about_us_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.about_us_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_about_us_cta.text)
+            time.sleep(1)
+            click_on_about_us_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+        except TimeoutException:
+            handle_exception(self.driver, "About Lubriderm element not found within the specified time. %s")
+        time.sleep(2)
+        return self
