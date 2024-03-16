@@ -18,7 +18,7 @@ class TestHomepage:
         self.Homepage.close_pop_up()
         self.Homepage.banner_section()
 
-    def test_our_products_section(self):
+    def test_shop_by_collection(self):
         self.Homepage.load()
         self.Homepage.close_pop_up()
         self.Homepage.shop_by_collection()

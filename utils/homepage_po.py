@@ -176,6 +176,142 @@ class Homepage:
             self.driver.back()
             time.sleep(1)
 
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            advanced_therapy_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.collection_image2)))
+
+            if advanced_therapy_image.is_displayed():
+                alt_text = advanced_therapy_image.get_attribute('alt')
+                logging.info("Main image is present and the Alt text is: %s", alt_text)
+            else:
+                logging.info("!!!!!!!!!! Main image is not present !!!!!!!!!!")
+
+            click_on_advanced_therapy_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.collection_image2)))
+            time.sleep(1)
+            click_on_advanced_therapy_image.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            advanced_therapy_header = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.advanced_therapy_header_text)))
+            logging.info(advanced_therapy_header.text)
+            time.sleep(1)
+            advanced_therapy_header.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            grab_advanced_therapy_sub_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.advanced_therapy_sub_text)))
+            logging.info(grab_advanced_therapy_sub_text.text)
+            time.sleep(1)
+
+            click_on_advanced_therapy_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.advanced_therapy_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_advanced_therapy_cta.text)
+            time.sleep(1)
+            click_on_advanced_therapy_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            intense_skin_repair_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.collection_image3)))
+
+            if intense_skin_repair_image.is_displayed():
+                alt_text = intense_skin_repair_image.get_attribute('alt')
+                logging.info("Main image is present and the Alt text is: %s", alt_text)
+            else:
+                logging.info("!!!!!!!!!! Main image is not present !!!!!!!!!!")
+
+            click_on_intense_skin_repair_image = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.collection_image3)))
+            time.sleep(1)
+            click_on_intense_skin_repair_image.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            intense_skin_repair_header = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.intense_skin_repair_header_text)))
+            logging.info(intense_skin_repair_header.text)
+            time.sleep(1)
+            intense_skin_repair_header.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_shop_by_collection_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.shop_by_collection_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_shop_by_collection_section)
+            time.sleep(3)
+
+            grab_intense_skin_repair_sub_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.intense_skin_repair_sub_text)))
+            logging.info(grab_intense_skin_repair_sub_text.text)
+            time.sleep(1)
+
+            click_on_intense_skin_repair_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.intense_skin_repair_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_intense_skin_repair_cta.text)
+            time.sleep(1)
+            click_on_intense_skin_repair_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
         except TimeoutException:
             handle_exception(self.driver, "Banner element not found within the specified time. %s")
         time.sleep(2)
