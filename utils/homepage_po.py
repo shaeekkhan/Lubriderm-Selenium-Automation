@@ -597,6 +597,194 @@ class Homepage:
             time.sleep(2)
 
         except TimeoutException:
-            handle_exception(self.driver, "Products element not found within the specified time. %s")
+            handle_exception(self.driver, "Our Best seller element not found within the specified time. %s")
+        time.sleep(2)
+        return self
+
+    def skin_concern(self):
+        try:
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            grab_skin_concern_section_header_text = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_header_text)))
+            logging.info(grab_skin_concern_section_header_text.text)
+            time.sleep(1)
+
+            click_on_see_all_skin_concern_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concerns_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_see_all_skin_concern_cta.text)
+            time.sleep(1)
+            click_on_see_all_skin_concern_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_skin_concern_image1 = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_image1)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_skin_concern_image1.text)
+            time.sleep(1)
+            click_on_skin_concern_image1.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_normal_to_dry_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.normal_to_dry_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_normal_to_dry_cta.text)
+            time.sleep(1)
+            click_on_normal_to_dry_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_skin_concern_image2 = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_image2)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_skin_concern_image2.text)
+            time.sleep(1)
+            click_on_skin_concern_image2.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_extra_dry_skin_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.extra_dry_skin_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_extra_dry_skin_cta.text)
+            time.sleep(1)
+            click_on_extra_dry_skin_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_skin_concern_image3 = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_image3)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_skin_concern_image3.text)
+            time.sleep(1)
+            click_on_skin_concern_image3.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_itchy_dry_skin_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.itchy_dry_skin_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_itchy_dry_skin_cta.text)
+            time.sleep(1)
+            click_on_itchy_dry_skin_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_skin_concern_image4 = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_image4)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_skin_concern_image4.text)
+            time.sleep(1)
+            click_on_skin_concern_image4.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+            click_on_mature_skin_care_cta = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.mature_skin_care_cta)))
+            time.sleep(1)
+            logging.info("Product name Text: %s", click_on_mature_skin_care_cta.text)
+            time.sleep(1)
+            click_on_mature_skin_care_cta.click()
+            time.sleep(2)
+            current_url = self.driver.current_url
+            title = self.driver.title
+            logging.info("Redirected URL is: %s", current_url)
+            logging.info("Page Title: %s", title)
+            self.driver.back()
+            time.sleep(1)
+
+            scroll_to_skin_concern_section = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, HomepageLocators.skin_concern_section)))
+            self.driver.execute_script("arguments[0].scrollIntoView();", scroll_to_skin_concern_section)
+            time.sleep(3)
+
+        except TimeoutException:
+            handle_exception(self.driver, "Skin Concern element not found within the specified time. %s")
         time.sleep(2)
         return self

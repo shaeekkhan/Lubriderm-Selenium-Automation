@@ -36,4 +36,4 @@ class TestHomepage:
     def test_related_content_section(self):
         self.Homepage.load()
         self.Homepage.close_pop_up()
-        self.Homepage.related_content_section()
+        self.Homepage.skin_concern()

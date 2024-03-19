@@ -41,3 +41,14 @@ class HomepageLocators:
     buy_now_cta3 = '//*[@id="__next"]/main/div[5]/div[1]/div/div/div/div/div[3]/div/div/div[3]/div[2]/div'
     price_spider_pop_up3 = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div"
     price_spider_pop_up3_close = "body > div.ps-container.ps-lightbox.ps-6462c37d7d0774004fa25168.ps-open > div > span"
+    skin_concern_section = '//*[@id="__next"]/main/div[5]/div[3]/h2'
+    skin_concern_header_text = '//*[@id="__next"]/main/div[5]/div[3]/h2/span'
+    skin_concerns_cta = '//*[@id="__next"]/main/div[5]/div[3]/a/button'
+    skin_concern_image1 = '//*[@id="__next"]/main/div[5]/div[4]/div[1]/div[1]/a/img'
+    normal_to_dry_cta = '//*[@id="__next"]/main/div[5]/div[4]/div[1]/div[2]/a'
+    skin_concern_image2 = '//*[@id="__next"]/main/div[5]/div[4]/div[2]/div[1]/a/img'
+    extra_dry_skin_cta = '//*[@id="__next"]/main/div[5]/div[4]/div[2]/div[2]/a'
+    skin_concern_image3 = '//*[@id="__next"]/main/div[5]/div[4]/div[3]/div[1]/a/img'
+    itchy_dry_skin_cta = '//*[@id="__next"]/main/div[5]/div[4]/div[3]/div[2]/a'
+    skin_concern_image4 = '//*[@id="__next"]/main/div[5]/div[4]/div[4]/div[1]/a/img'
+    mature_skin_care_cta = '//*[@id="__next"]/main/div[5]/div[4]/div[4]/div[2]/a'
